@@ -32,7 +32,10 @@ class TestRequiredFields(unittest.TestCase):
         assert "Congratulations! You have successfully registered!" == welcome_text
         self.assertEqual(welcome_text, "Congratulations! You have successfully registered!",
                          "Не все обязательыне поля заполнены!")
-
+        # ожидание чтобы визуально оценить результаты прохождения скрипта
+        time.sleep(10)
+        # закрываем браузер после всех манипуляций
+        browser.quit()
 
 if __name__ == "__main__":
     unittest.main()
